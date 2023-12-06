@@ -1,14 +1,26 @@
 # Jarkom-Modul-4-A03-2023
 
+### Kalyana Putri Al Kanza / 5025211137
+
 ## Topologi soal
 
 ![image](https://cdn.discordapp.com/attachments/1181618299046477984/1181618370915881040/topologi_soal.png?ex=6581b6dd&is=656f41dd&hm=170be8140c2f51787080a4ae0dd4df2ab62ad22512f50519a29b097f32f8776f&)
 
-## Pembagian Subnet                                                                                                                                                                                                        
+## Pembagian Subnet             
 
+<img width="556" alt="subnet" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/4a40af2b-ff1a-4ca0-aaa9-138b740f5885">
 
+# CIDR
 
-## CIDR
+## Langkah 1
+
+Tentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet. 
+
+![image](https://cdn.discordapp.com/attachments/1181618299046477984/1181624830328586342/image.png?ex=6581bce1&is=656f47e1&hm=6d6ac4917500623078b6950472bbd403a2dedfd05ceff42fdccd814eeca25dd2&)
+
+## Langkah 2
+
+Lakukan penggabungan subnet dari subnet yang paling jauh dari internet. Subnet yang digabung tersebut akan membentuk sebuah subnet lebih besar dari subnet-subnet kecil yang ada di dalamnya. Lalu ulangi langkah tersebut sampai menjadi sebuah subnet besar yang mencakup 1 topologi yang kita milik
 
 ### Iterasi 1
 
@@ -54,29 +66,165 @@
 
 <img alt="11" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/80da24bf-9f70-48e2-8b15-8274089ea03f">
 
-tree cidr
+## Langkah 3 
+
+Dari proses penggabungan yang telah dilakukan, didapatkan sebuah subnet besar dengan netmask /21. Kali ini dapat menggunakan NID 192.170.0.0, netmask 255.255.248.0.
+
+## Langkah 4 
+
+Hitung pembagian IP dengan pohon berdasarkan penggabungan subnet yang telah dilakukan.
 
 ![image](https://cdn.discordapp.com/attachments/1181618299046477984/1181618371196878908/tree_cidr.jpg?ex=6581b6dd&is=656f41dd&hm=569dde914893c49fdddb0b693ec8a54f460a899ec94085eefe8e63ca28ea13b2&)
 
+## Langkah 5
+
+Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berikut:
+
 ![image](https://media.discordapp.net/attachments/1181618299046477984/1181628924367732846/image.png?ex=6581c0b1&is=656f4bb1&hm=29f22fad21d96b4edda1c1755efc0d86c583614146e238110e4acdd9800bf159&=&format=webp&quality=lossless&width=867&height=663)
 
+## Langkah 6
+
+Di Cisco Packet Tracer, buat topologi sebagai berikut.
+
+<img alt="image" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/5617b33b-0299-40c9-b3d7-074e8d70d1c4">
+
+Untuk subnetting, lakukan konfigurasi IP dan subnet pada router, client, dan server dengan subnet sesuai tabel di langkah 4 dan IP sesuai gambar berikut:
+
+![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/9b98aa85-b771-499f-9336-a995ddba73b1)
+
+## Langkah 7
+
+Lakukan konfigurasi pada masing-masing router sebagai berikut untuk routing:
+
+### Aura
+
+```
+192.170.64.0/27 via 192.170.128.2
+192.170.0.0/21 via 192.170.128.2
+192.170.8.0/30 via 192.170.128.2
+192.170.32.0/30 via 192.170.128.2
+192.170.20.8/30 via 192.170.128.2
+192.170.20.8/30 via 192.170.128.2
+192.170.20.0/29 via 192.170.128.2
+192.172.80.0/29 via 192.172.128.2
+192.172.80.8/30 via 192.172.128.2
+192.172.72.0/30 via 192.172.128.2
+192.172.32.0/30 via 192.172.128.2
+192.172.8.0/30 via 192.172.128.2
+192.172.64.0/22 via 192.172.128.2
+192.172.68.0/24 via 192.172.128.2
+192.172.16.0/23 via 192.172.128.2
+192.172.4.0/26 via 192.172.128.2
+192.172.0.0/22 via 192.172.128.2
+192.171.0.0/24 via 192.171.1.2
+```
+
+### Eisen
+
+```
+0.0.0.0/0 via 192.172.128.1
+192.172.64.0/22 via 192.172.72.2
+192.172.68.0/24 via 192.172.72.2
+192.172.16.0/23 via 192.172.32.2
+192.172.8.0/30 via 192.172.32.2
+192.172.4.0/26 via 192.172.32.2
+192.172.0.0/22 via 192.172.32.2
+```
+
+### Linie
+
+```
+192.172.4.0/26 via 192.172.8.2
+192.172.0.0/22 via 192.172.8.2
+0.0.0.0/0 via 192.172.32.1
+```
+
+### Lawine
+
+```
+192.172.0.0/22 via 192.172.4.2
+0.0.0.0/0 via 192.172.8.1
+```
+
+### Frieren
+
+```
+192.170.8.0/30 via 192.170.32.2
+192.170.0.0/21 via 192.170.32.2
+192.170.16.0/22 via 192.170.32.2
+192.170.20.8/30 via 192.170.32.2
+192.170.20.0/29 via 192.170.32.2
+0.0.0.0/0 via 192.170.128.1
+```
+
+### Flamme
+
+```
+192.170.0.0/21 via 192.170.8.2
+192.170.20.0/29 via 192.170.20.10
+0.0.0.0/0 via 192.170.32.1
+```
+
+### Fern
+
+```
+0.0.0.0/0 via 192.170.8.1
+```
+
+### Himmel
+
+```
+0.0.0.0/0 via 192.170.20.9
+```
+
+### Heiter
+
+```
+0.0.0.0/0 via 192.172.4.1
+```
+
+### Lugner
+
+```
+0.0.0.0/0 via 192.172.72.1
+```
+
+### Denken
+
+```
+0.0.0.0/0 via 192.171.1.1
+```
+
+## Testing
+
+### Dari router
+
+<img alt="router" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/50a9f12f-4cea-4ba9-8884-e93ef54417a7">
+
+### Dari server
+
+<img alt="server" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/aa0573c5-1039-4acb-89de-83d36cf68c9d">
+
+### Dari client
+
+<img alt="client" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/089ae8d3-f537-4a70-b55e-ae72fa30ce7f">
 
 
-## VLSM
+# VLSM
 
-### Langkah 1
+## Langkah 1
 
 Tentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan lakukan labelling netmask berdasarkan jumlah IP yang dibutuhkan.
 
 ![image](https://cdn.discordapp.com/attachments/1181618299046477984/1181624830328586342/image.png?ex=6581bce1&is=656f47e1&hm=6d6ac4917500623078b6950472bbd403a2dedfd05ceff42fdccd814eeca25dd2&)
 
-### Langkah 2
+## Langkah 2
 
 Subnet besar yang dibentuk memiliki NID 192.168.1.0 dengan netmask /24. Perhitungan pembagian IP dilakukan berdasarkan NID dan netmask tersebut menggunakan pohon seperti gambar di bawah.
 
 ![image](https://cdn.discordapp.com/attachments/1181618299046477984/1181618371511464018/tree_vlsm.jpg?ex=6581b6dd&is=656f41dd&hm=43bb0f504c2ffa6a8c0829fb56fb716a0f0571e49eb656a68d1558c8229243f7&)
 
-### Langkah 3
+## Langkah 3
 
 Lakukan subnetting dengan menggunakan pohon tersebut untuk pembagian IP sesuai dengan kebutuhan masing-masing subnet yang ada.
 
@@ -88,7 +236,7 @@ Dari pohon dari pohon tersebut akan mendapat pembagian IP sebagai berikut.
 
 ## Langkah 4
 
-Lakukan konfigurasi pada masing-masing router, client, dan server, sebagai berikut untuk subnetting:
+Di GNS3, lakukan konfigurasi pada masing-masing router, client, dan server, sebagai berikut untuk subnetting:
 
 ### Aura
 
