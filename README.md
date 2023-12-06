@@ -10,6 +10,49 @@
 
 ## CIDR
 
+### Iterasi 1
+
+<img alt="1" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/3188428f-e40c-409d-9a51-b7ea12f19833">
+
+### Iterasi 2
+
+<img alt="2" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/01a6c729-73a7-4ca1-9037-093494ffe9a3">
+
+### Iterasi 3
+
+<img alt="3" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/e44bed49-dbb4-47ae-8431-a927ed86a0c9">
+
+### Iterasi 4
+
+<img alt="4" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/14a4aada-cbbf-4046-874b-1b17e6e0d40e">
+
+### Iterasi 5
+
+<img alt="5" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/dd71aa1a-3c45-412e-b047-700f6a5e5422">
+
+### Iterasi 6
+
+<img alt="6" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/a8ffdf17-ab9e-4ad4-b96f-78b46806cdc7">
+
+### Iterasi 7
+
+<img alt="7" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/058911de-06ed-498c-975d-d9cb03da90b6">
+
+### Iterasi 8
+
+<img alt="8" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/01a0d756-a099-4517-ad60-69505f03236a">
+
+### Iterasi 9
+
+<img alt="9" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/c1d35f22-b74f-4e49-b3d7-ea929976db5f">
+
+### Iterasi 10
+
+<img alt="10" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/eb47ac45-5ad6-401b-8bf7-1d4887960321">
+
+### Iterasi 11
+
+<img alt="11" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/80da24bf-9f70-48e2-8b15-8274089ea03f">
 
 tree cidr
 
@@ -512,14 +555,38 @@ route add -net 192.170.0.48 netmask 255.255.255.248 gw 192.170.0.22
 
 ### Client ke client
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/3188428f-e40c-409d-9a51-b7ea12f19833)
+<img alt="client client" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/137da725-b663-4a75-9afa-69c2e2519fba">
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/01a6c729-73a7-4ca1-9037-093494ffe9a3)
+### Ping google dari client
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/e44bed49-dbb4-47ae-8431-a927ed86a0c9)
+<img alt="client google" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/ba018fcf-63d2-4d35-8eca-f7e4171cbac7">
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/14a4aada-cbbf-4046-874b-1b17e6e0d40e)
+### Client ke router
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/dd71aa1a-3c45-412e-b047-700f6a5e5422)
+<img width="360" alt="client router" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/51a14610-20cd-425e-8094-8aa5029876e0">
 
-![image](https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/a8ffdf17-ab9e-4ad4-b96f-78b46806cdc7)
+### Client ke server
+
+<img alt="client server" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/d6891baf-da85-47f0-a26f-cb0b4ab873b7">
+
+### Ping google dari router
+
+<img alt="router google" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/d07612a5-8ba0-4a9a-a147-53cffd73c271">
+
+### Router ke router
+
+<img alt="router router" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/7f47c878-b218-4c87-ad09-b51abee88a5a">
+
+### Ping google dari server
+
+<img alt="server google" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/e642e3c0-b300-4487-921d-e3e06ed0ee4d">
+
+### Server ke router
+
+<img alt="server router" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/23c788a8-f4f2-4f71-8911-91dc9c7de138">
+
+### Server ke server
+
+<img alt="server server" src="https://github.com/kalyanaalk/Jarkom-Modul-4-A03-2023/assets/107338432/bcffd34a-7ccb-43fc-a90a-7abf00eecf9f">
+
+
